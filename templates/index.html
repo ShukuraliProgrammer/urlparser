@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>URL and Text Input Form</title>
+    <style>
+      /* CSS styling for form elements */
+      form {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type="text"], input[type="url"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      button[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      #output {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        min-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="post">
+        {% csrf_token %}
+      <label for="url">Enter a URL:</label>
+      <input type="url" id="url" name="url" placeholder="https://example.com" required>
+
+      <label for="text">Enter some text:</label>
+      <input type="text" id="text" name="text" placeholder="Enter your text here" required>
+
+      <button type="submit" id="submit">Submit</button>
+    </form>
+
+    <div id="output">{{result}}</div>
+
+
+  </body>
+</html>
