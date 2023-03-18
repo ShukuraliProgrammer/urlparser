@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from django.shortcuts import render
 from .models import UrlParser
 
+
 def get_html(url):
     response = requests.get(url)
     if response.ok:

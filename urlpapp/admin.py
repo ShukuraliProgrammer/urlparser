@@ -1,9 +1,8 @@
 from django.contrib import admin
 from django.contrib.auth.models import User, Group
-from parser.models import UrlParser
+from urlpapp.models import UrlParser
 
-admin.site.unregister(User)
-admin.site.unregister(Group)
+
 
 
 class UrlParserAdmin(admin.ModelAdmin):

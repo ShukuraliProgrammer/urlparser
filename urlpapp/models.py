@@ -11,4 +11,3 @@ class UrlParser(models.Model):
 
     def __str__(self):
         return self.url
-
