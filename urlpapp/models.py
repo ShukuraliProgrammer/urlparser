@@ -1,7 +1,7 @@
 from django.db import models
+#that is cool thing model
 
 
-# Create your models here.
 class UrlParser(models.Model):
     url = models.CharField(max_length=100)
     text = models.CharField(max_length=100)
