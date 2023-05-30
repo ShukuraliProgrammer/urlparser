@@ -1,5 +1,5 @@
 from django.db import models
-
+#that is cool thing model
 
 
 class UrlParser(models.Model):
